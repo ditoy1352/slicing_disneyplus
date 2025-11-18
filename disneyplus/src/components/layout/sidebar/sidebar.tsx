@@ -2,9 +2,11 @@ import type { PropsWithChildren } from 'react';
 import styles from './index.module.css'
 import clsx from 'clsx';
 
-type MenuItemsProps = PropsWithChildren<{
+type MenuItemsProps = {
   icon: string;
-}>;
+  children: React.ReactNode;
+}
+
 const MenuItems = (props: PropsWithChildren<MenuItemsProps>) => {
   const { children, icon} = props;
 

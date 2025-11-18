@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react';
 import style from './index.module.css';
 import Sidebar from './sidebar/sidebar';
-import Page from './pages';
+import Page from './page';
 const Layout = (props: PropsWithChildren<unknown>) => {
  const {children} = props;
 

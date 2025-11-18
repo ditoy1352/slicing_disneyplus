@@ -1,11 +1,11 @@
-import { PropsWithChildren } from "react"
+import type { PropsWithChildren } from 'react';
 import styles from './index.module.css';
 
 
 const Page = (props: PropsWithChildren<unknown>) => {
-    const {Children} = props;
+    const {children} = props;
     return (
-        <div className={styles.container}>{Children}</div>
+        <div className={styles.container}>{children}</div>
     )
 }
 

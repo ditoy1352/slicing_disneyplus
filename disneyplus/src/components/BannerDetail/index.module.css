@@ -1,0 +1,10 @@
+.container {
+    height: 50vw;
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+}
