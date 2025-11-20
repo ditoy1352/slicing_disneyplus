@@ -8,3 +8,47 @@
     justify-content: flex-end;
     margin-bottom: 32px;
 }
+
+.title {
+    font-size: 3.2vw;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.section{
+    display: flex;
+    margin-top: 16px;
+}
+
+.section1 span{
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.section1 i{
+    margin: 0 8px;
+    color: #FFFFFF;
+    font-weight: 14px;
+}
+
+.section2 p{
+    font-size: 14px;
+    font-weight: 400;
+    margin:0;
+    color: #FFFFFF;
+    line-height: 20px;
+    max-width: 400px;
+}
+
+.section3 span{
+    margin: 0 8px;
+    color: #FFFFFF;
+}
+
+.section3 b{
+    font-weight: bold;
+    color: #FFFFFF;
+}
