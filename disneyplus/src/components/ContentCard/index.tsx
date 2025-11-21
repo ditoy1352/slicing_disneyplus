@@ -8,7 +8,7 @@ interface props {
 const ContentCard = (props: props) => { 
     const {title, paragraft, poster, banner} = props;
     return (
-        <div className={styles.container}>
+        <div className={styles.cardContainer}>
             <div className={styles.content}>
                 <div className={styles.poster}>
                     <img src={poster}
@@ -22,7 +22,6 @@ const ContentCard = (props: props) => {
             <div className={styles.detail}>
                 <div className={styles.bannerWrapper}>
                     <img src={banner}
-                    width="100%"
                     />
                 </div>
                 <div className={styles.detailWrapper}>

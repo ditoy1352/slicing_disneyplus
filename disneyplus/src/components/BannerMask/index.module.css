@@ -9,7 +9,9 @@
 
 .topMask {
     position: absolute;
-    height: 60vw;
+    top: 0; /* Mulai dari atas */
+    left: 0;
+    height: 60vw; /* Tinggi gradient */
     width: 100%; 
     background: linear-gradient(
         180deg,
@@ -26,9 +28,14 @@
         rgba(15, 16, 20, 0.12) 29.73%, 
         rgba(15, 16, 20, 0) 40.59%
     );
-    
 }
-.bottomaks{
-    height: 100%;
+
+.bottomMask {
     background-color: rgb(15, 16, 20);
+    position: absolute; /* FIX: Bukan "overflow: absolute" */
+    top: 60vw; /* PENTING: Mulai dari akhir topMask */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 112px;
 }

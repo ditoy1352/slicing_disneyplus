@@ -1,0 +1,28 @@
+/* --- CSS Khusus untuk ScrollableSection (Swiper Wrapper) --- */
+
+.container {
+    width: 100%;
+    /* padding: 40px 20px; */
+    /* position: relative; */
+    /* PENTING: Jaga agar container utama tidak memiliki overflow: hidden */
+}
+
+.title {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding-left: 10px; /* Align dengan card padding */
+}
+
+.swiper {
+    width: 100%;
+    padding: 10px 0; 
+}
+
+/* PERBAIKAN UTAMA Z-INDEX UNTUK HOVER
+Kita menargetkan SwiperSlide karena ia adalah wrapper dari ContentCard
+*/
+.swiper :global(.swiper-slide:hover) {
+    z-index: 10; 
+}
