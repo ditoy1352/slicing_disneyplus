@@ -1,12 +1,14 @@
-import BannerDetail from "../../BannerDetail/index";
-import BannerMask from "../../BannerMask/index";
-import ContentCard from "../../ContentCard";
-import ImageBanner from "../../ImageBanner/index";
-import ScrollableSection from "../../ScrollableSection";
-import SectionScroll from "../../ScrollableSection/SectionScroll";
+import {useNavigate } from "react-router-dom";
+import BannerDetail from "../../components/BannerDetail";
+import BannerMask from "../../components/BannerMask";
+import ContentCard from "../../components/ContentCard";
+import ImageBanner from "../../components/ImageBanner";
+import ScrollableSection from "../../components/ScrollableSection";
+import SectionScroll from "../../components/ScrollableSection/SectionScroll";
 
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <ImageBanner />
@@ -14,9 +16,10 @@ const Home = () => {
             <BannerMask>
                 <ScrollableSection title="Popular Movies">
                     
-                {Array(12).fill(0).map((_, index) => (
-                    <SectionScroll>
+                {[...Array(12).keys()].map((index) => (
+                    <SectionScroll key={index}>
                         <ContentCard
+                            onClik={() => navigate("/content-detail")}
                             title="Whiplash"
                             paragraft="lorem ipsum dolot sit amet amit punya cewe jelek jangan sampe loh ya"
                             banner="https://wallpapercave.com/wp/wp1951947.jpg"
