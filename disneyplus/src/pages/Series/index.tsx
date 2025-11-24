@@ -7,7 +7,7 @@ import ScrollableSection from "../../components/ScrollableSection";
 import SectionScroll from "../../components/ScrollableSection/SectionScroll";
 
 
-const Movies = () => {
+const Series = () => {
     const navigate = useNavigate();
     return (
         <div>
@@ -33,4 +33,4 @@ const Movies = () => {
     )
 }
 
-export default Movies;
+export default Series;

@@ -3,6 +3,8 @@ import Layout from "./components/layout"
 import Home from "./pages/Home"
 import Search from "./pages/Search"
 import ContentDetail from "./pages/ContentDetail"
+import Series from "./pages/Series"
+import Movies from "./pages/Movies"
 
 const router = createBrowserRouter ([
     {
@@ -20,7 +22,15 @@ const router = createBrowserRouter ([
             {
                 path:"content-detail",
                 element:<ContentDetail/>
-            }
+            },
+            {
+                path:"Series",
+                element:<Series/>
+            },
+            {
+                path:"Movies",
+                element:<Movies/>
+            },
         ]
     }
 ])

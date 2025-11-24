@@ -1,6 +1,40 @@
-.container {
+.searcbar{
+    height: 55px;
+    width: 100%;
+    background-color: #252833;
+    display: flex;
+    margin: 32px 0;
+    border-radius: 8px;
+}   
+
+.searcbar > span {
+    width: 64px;
+    height: 100%;
     display: flex;
     align-items: center;
-    color: white;
     justify-content: center;
+    font-size: 32px;
+    color: #8f98b2;
 }
+
+.searcbar > input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+.searcbar > input::placeholder{
+    color: #8f98b2;
+
+}
+
+.contentgrid{
+    display: grid;
+    grid-template-columns: repeat(7, minmax(91px, 1fr));
+    gap: 8px;
+}
+
