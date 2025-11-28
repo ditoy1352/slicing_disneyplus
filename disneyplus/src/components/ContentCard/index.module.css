@@ -57,7 +57,7 @@ dengan .container di ScrollableSection.
     top: 0;
     /* Card detail harus menempati seluruh ruang slide */
     width: 100%;
-    height: 100%;
+    height: 90%;
     overflow: hidden;
     color: white;
     background-color: #16181f;

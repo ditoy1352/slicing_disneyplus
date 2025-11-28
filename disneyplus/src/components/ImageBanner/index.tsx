@@ -1,8 +1,16 @@
 import styles from './index.module.css'
-const ImageBanner = () => {
+
+interface props {
+    src: string,
+    alt?: string
+}
+const ImageBanner = (props: props) => {
     return (
         <div className={styles.container}>
-            <img height="100%" src="https://www.jaehakim.com/wp-content/uploads/2024/01/Welcome-to-Samdal-ri-duo.jpg" alt="" />
+            <img 
+            height="100%" 
+            src={props.src} 
+            alt={props.alt} />
         </div>
     )
 }

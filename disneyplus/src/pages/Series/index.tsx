@@ -11,15 +11,15 @@ const Series = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <ImageBanner />
-            <BannerDetail />
+            {/* <ImageBanner />
+            <BannerDetail /> */}
             <BannerMask>
                 <ScrollableSection title="Popular Movies">
                     
                 {[...Array(12).keys()].map((index) => (
                     <SectionScroll key={index}>
                         <ContentCard
-                            onClik={() => navigate("/content-detail")}
+                            onClick={() => navigate("content-TvSeries-detail")}
                             title="Whiplash"
                             paragraft="lorem ipsum dolot sit amet amit punya cewe jelek jangan sampe loh ya"
                             banner="https://wallpapercave.com/wp/wp1951947.jpg"

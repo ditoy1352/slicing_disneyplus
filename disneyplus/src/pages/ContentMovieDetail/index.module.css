@@ -1,0 +1,16 @@
+.SeasonTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.tabsSection {
+    color: #9a9a9ad6;
+    margin-right: 18px;
+    cursor: pointer;
+}
+
+.tabsSection > span:hover, span[data-active='true']{
+    color: white;
+}

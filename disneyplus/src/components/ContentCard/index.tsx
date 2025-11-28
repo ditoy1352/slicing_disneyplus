@@ -4,12 +4,12 @@ interface props {
     paragraft: string,
     poster: string,
     banner: string,
-    onClik?: () => void
+    onClick?: () => void
 }
 const ContentCard = (props: props) => { 
-    const {title, paragraft, poster, banner, onClik} = props;
+    const {title, paragraft, poster, banner, onClick} = props;
     return (
-        <div className={styles.cardContainer} onClick={onClik}>
+        <div className={styles.cardContainer} onClick={onClick}>
             <div className={styles.content}>
                 <div className={styles.poster}>
                     <img src={poster}

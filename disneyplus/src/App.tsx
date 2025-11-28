@@ -2,9 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "./components/layout"
 import Home from "./pages/Home"
 import Search from "./pages/Search"
-import ContentDetail from "./pages/ContentDetail"
 import Series from "./pages/Series"
 import Movies from "./pages/Movies"
+import ContentTvSeriesDetail from "./pages/ContentTvSeriesDetail"
+import ContentMovieDetail from "./pages/ContentMovieDetail"
 
 const router = createBrowserRouter ([
     {
@@ -20,8 +21,12 @@ const router = createBrowserRouter ([
                 element:<Search/>
             },
             {
-                path:"content-detail",
-                element:<ContentDetail/>
+                path:"content-tvSeries-detail",
+                element:<ContentTvSeriesDetail/>
+            },
+            {
+                path:"content-movie-detail",
+                element:<ContentMovieDetail/>
             },
             {
                 path:"Series",
