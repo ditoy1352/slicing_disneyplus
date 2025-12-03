@@ -2,10 +2,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "./components/layout"
 import Home from "./pages/Home"
 import Search from "./pages/Search"
-import Series from "./pages/Series"
 import Movies from "./pages/Movies"
 import ContentTvSeriesDetail from "./pages/ContentTvSeriesDetail"
-import ContentMovieDetail from "./pages/ContentMovieDetail"
+import MoviesDetail from "./pages/ContentMoviesDetail"
+import Series from "./pages/tv"
+import Login from "./pages/login"
+import Signup from "./pages/signup"
 
 const router = createBrowserRouter ([
     {
@@ -21,12 +23,12 @@ const router = createBrowserRouter ([
                 element:<Search/>
             },
             {
-                path:"content-tvSeries-detail",
+                path:"tv/:id",
                 element:<ContentTvSeriesDetail/>
             },
             {
-                path:"content-movie-detail",
-                element:<ContentMovieDetail/>
+                path:"movie/:id",
+                element:<MoviesDetail/>
             },
             {
                 path:"Series",
@@ -35,6 +37,14 @@ const router = createBrowserRouter ([
             {
                 path:"Movies",
                 element:<Movies/>
+            },
+            {
+                path:"login",
+                element:<Login/>
+            },
+            {
+                path:"signup",
+                element:<Signup/>
             },
         ]
     }

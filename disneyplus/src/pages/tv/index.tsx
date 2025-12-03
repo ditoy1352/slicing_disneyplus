@@ -8,14 +8,11 @@ import SectionScroll from "../../components/ScrollableSection/SectionScroll";
 import useFetch from "../../hooks/useFetch";
 import useGenres from "../../hooks/useGenre";
 import useMapGenreIdtoName from "../../hooks/useMapGenreIdToName";
-import useAuthState from "../../hooks/useAuthState";
 
-const Home = () => {
-
-  const auth = useAuthState();
+const Series = () => {
 
   const { loading, data } = useFetch(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=f50d225e3cdac99285cf26d45fe45733`
+    `https://api.themoviedb.org/3/trending/tv/day?api_key=f50d225e3cdac99285cf26d45fe45733`
   );
 
   // const { genres: allGenres, loading: loadingGenres } = useGenres(); // NEW: fetch all genres
@@ -26,33 +23,30 @@ const Home = () => {
   const processedGenres = useMapGenreIdtoName(firstContent.genre_ids, genres); // NEW: process genres
 
   const navigate = useNavigate();
-
-  const sectionTitle = auth ? `Welcome back, ${auth.displayName}, Recomended for you` : "Trending Now";
-
   return (
     <div>
       <ImageBanner 
       alt={firstContent.title} 
       src={`https://image.tmdb.org/t/p/original/${firstContent.backdrop_path}`} />
       <BannerDetail 
-      title={firstContent.title || firstContent.name}
+      title={firstContent.name} 
       overview={firstContent.overview}
-      releaseDate={firstContent.release_date || firstContent.first_air_date}
+      releaseDate={firstContent.first_air_date}
       genres={processedGenres} // MODIFIED PROP
       language={firstContent.original_language}      
       />
       <BannerMask>
-        <ScrollableSection title={sectionTitle}>
+        <ScrollableSection title="Trending Now">
           {!loading &&
             data &&
             data.results &&
             data.results.map((content: any) => (
               <SectionScroll key={content.id}>
-                <ContentCard
+                <ContentCard  
                   onClick={() =>
-                    navigate(`${content.media_type === 'movie' ? 'movie' : 'tv'}/${content.id}`)
+                    navigate(`/tv/${content.id}`)
                   }
-                  title={content.title || firstContent.name}
+                  title={content.name}
                   paragraft={content.overview}
                   poster={`https://image.tmdb.org/t/p/w500/${content.poster_path}`}
                   banner={`https://image.tmdb.org/t/p/w500/${content.backdrop_path}`}
@@ -65,4 +59,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Series;
